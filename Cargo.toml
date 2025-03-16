@@ -1,0 +1,35 @@
+[package]
+name = "http-flows"
+description = "I/O-free library to send HTTP requests"
+version = "0.1.0"
+authors = ["soywod <clement.douin@posteo.net>"]
+edition = "2021"
+license = "MIT"
+categories = []
+keywords = ["http", "flow", "io-free", "send", "receive"]
+homepage = "https://pimalaya.org"
+documentation = "https://docs.rs/http-flows/latest/http_flows"
+repository = "https://github.com/pimalaya/http"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dev-dependencies]
+env_logger = "0.11"
+native-tls = "0.2"
+rustls = "0.23"
+rustls-platform-verifier = "0.5"
+stream-flows = { version = "0.1", features = ["std"] }
+url = "2.5"
+
+[dependencies]
+base64 = "0.22"
+chrono = "0.4"
+log = "0.4"
+memchr = "2.7.4"
+secrecy = "0.10"
+stream-flows = { version = "0.1", default-features = false }
+
+[patch.crates-io]
+stream-flows.git = "https://github.com/pimalaya/stream"
