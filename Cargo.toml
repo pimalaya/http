@@ -1,0 +1,11 @@
+[workspace]
+resolver = "2"
+members = ["lib", "io/std"]
+
+[patch.crates-io]
+http-lib.path = "./lib"
+http-std.path = "./io/std"
+tcp-lib.git = "https://github.com/pimalaya/tcp"
+tcp-std.git = "https://github.com/pimalaya/tcp"
+# tcp-lib.path = "../tcp/lib"
+# tcp-std.path = "../tcp/io/std"

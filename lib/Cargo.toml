@@ -1,0 +1,27 @@
+[package]
+name = "http-lib"
+description = "I/O-free library to manage HTTP streams"
+version = "0.1.0"
+authors = ["soywod <clement.douin@posteo.net>"]
+edition = "2021"
+license = "MIT"
+categories = []
+keywords = ["http", "stream", "io-free", "send", "receive"]
+homepage = "https://pimalaya.org"
+documentation = "https://docs.rs/http-lib/latest/http_lib"
+repository = "https://github.com/pimalaya/http/tree/master/lib"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dev-dependencies]
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[dependencies]
+base64 = "0.22"
+chrono = "0.4"
+memchr = "2.7.4"
+secrecy = "0.10"
+tcp-lib = "0.1"
+tracing = "0.1"
